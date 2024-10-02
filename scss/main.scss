@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import 'config';
 @import 'menu';
 
@@ -33,7 +34,7 @@ h3 {
 	&.sm-heading {
 		margin-bottom: 2rem;
 		padding: 0.2rem 1rem;
-		background: rgba(lighten($primary-color, 2), 0.5);
+		background: rgba(color.scale($primary-color, $lightness: 2%), 0.5);
 	}
 }
 
@@ -109,7 +110,7 @@ main {
     }
   
     .job {
-      background: lighten($primary-color, 5);
+      background: color.scale($primary-color, $lightness: 5%);
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
     }
@@ -177,20 +178,20 @@ main {
   
   .btn-dark {
       @extend .btn;
-      background: darken($primary-color, 50);
+      background: color.scale($primary-color, $lightness: -50%);
       color: #fff;
   }
   
   .btn-light {
       @extend .btn;
-      background: lighten($primary-color, 50);
+      background: color.scale($primary-color, $lightness: 50%);
       color: #fff;
   }
   
   #main-footer {
     text-align: center;
     padding: 1rem;
-    background: darken($primary-color, 10);
+    background: color.scale($primary-color, $lightness: -10%);
     color: set-text-color($primary-color);
     height: 60px;
   }

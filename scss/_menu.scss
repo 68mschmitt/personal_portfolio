@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import "config";
 
 .menu-btn {
@@ -64,7 +65,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: color.scale($primary-color, $lightness: 5%);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeOut();

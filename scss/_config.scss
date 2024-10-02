@@ -1,3 +1,4 @@
+@use 'sass:color';
 $primary-color: #444;
 $secondary-color: #85FF9E;
 $show-home-image: true;
@@ -29,12 +30,13 @@ $background-opacity: 0.6;
 }
 
 // Set text color
-@function set-text-color($color) {
-    @if (lightness($color) > 40) {
-        @return #000;
-    } @else {
-        @return #fff;
+@function set-text-color($colorVar) {
+
+    @if color.channel($color: $colorVar, $channel: "hue", $space: hsl) > 40 
+    {
+      @return #000;
     }
+    @else @return #fff;
 }
 
 // Media query mixins

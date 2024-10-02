@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive"
+    "sass": "sass scss/main.scss dist/css/main.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "sass": "^1.79.4"
   }
 }
